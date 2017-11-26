@@ -1,6 +1,6 @@
 package org.bom4v.ti.serializers.calls
 
-import org.apache.spark.sql.types.{StructType,StructField,StringType,IntegerType,DoubleType}
+import org.apache.spark.sql.types.{StructType,StructField,StringType,IntegerType,DoubleType,TimestampType,DateType}
 
 /**
  * CallEvent
@@ -53,7 +53,7 @@ object CallEvent {
         StructField("specificationVersionNumber", IntegerType, true),
         StructField("releaseVersionNumber", IntegerType, true),
         StructField("fileName", StringType, true),
-        StructField("fileAvailableTimeStamp", StringType, true),
+        StructField("fileAvailableTimeStamp", TimestampType, true),
         StructField("fileUtcTimeOffset", IntegerType, true),
         StructField("sender", StringType, true),
         StructField("recipient", StringType, true),
