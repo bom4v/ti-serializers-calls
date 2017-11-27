@@ -1,11 +1,11 @@
 package org.bom4v.ti.serializers.calls
 
-import org.apache.spark.sql.types.{StructType,StructField,StringType,IntegerType,DoubleType,TimestampType,DateType}
+import org.apache.spark.sql.types.{StructType,StructField,StringType,IntegerType,LongType,FloatType,DoubleType,TimestampType,DateType}
 
 /**
- * CallEvent
+ * CallsModel
  */
-object CallEvent {
+object CallsModel {
 
   /**
     * Header:
@@ -59,19 +59,19 @@ object CallEvent {
         StructField("recipient", StringType, true),
         StructField("sequenceNumber", IntegerType, true),
         StructField("callEventsCount", StringType, true),
-        StructField("eventType", DoubleType, true),
-        StructField("imsi", IntegerType, true),
-        StructField("imei", IntegerType, true),
-        StructField("callEventStartTimeStamp", StringType, true),
+        StructField("eventType", StringType, true),
+        StructField("imsi", LongType, true),
+        StructField("imei", LongType, true),
+        StructField("callEventStartTimeStamp", TimestampType, true),
         StructField("utcTimeOffset", IntegerType, true),
         StructField("callEventDuration", DoubleType, true),
         StructField("causeForTermination", IntegerType, true),
-        StructField("accessPointNameNI", IntegerType, true),
-        StructField("accessPointNameOI", IntegerType, true),
-        StructField("dataVolumeIncoming", IntegerType, true),
-        StructField("dataVolumeOutgoing", IntegerType, true),
+        StructField("accessPointNameNI", StringType, true),
+        StructField("accessPointNameOI", StringType, true),
+        StructField("dataVolumeIncoming", StringType, true),
+        StructField("dataVolumeOutgoing", StringType, true),
         StructField("sgsnAddress", StringType, true),
-        StructField("ggsnAddress", DoubleType, true),
+        StructField("ggsnAddress", StringType, true),
         StructField("chargingId", StringType, true),
         StructField("chargeAmount", DoubleType, true),
         StructField("teleServiceCode", IntegerType, true),
@@ -88,5 +88,5 @@ object CallEvent {
         StructField("msisdn", StringType, true),
         StructField("servingNetwork", StringType, true)
       )
-    )
+    )  
 }
