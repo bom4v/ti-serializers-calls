@@ -18,6 +18,6 @@ all the Telecoms Intelligence (TI) Models components, including that project.
 Just add the dependency on `ti-serializers-calls` in the SBT project
 configuration (typically, `build.sbt` in the project root directory):
 ```scala
-libraryDependencies += "org.bom4v.ti" %% "ti-serializers-calls" % "0.0.1"
+libraryDependencies += "org.bom4v.ti" %% "ti-serializers-calls" % "0.0.1-spark2.3"
 ```
 
